@@ -457,7 +457,7 @@
     <div role="search">
         <label for="search_2" class="visuallyhidden">Busca por palavra-chave</label>
         <input type="search" name="search" id="search_2" class="search-form__input" placeholder="Digite aqui" />
-        <button type="submit"><span class="visuallyhidden">Executar</span>Buscar!</button>
+        <button type="submit"><span class="visuallyhidden">Buscar!</span>Buscar!</button>
       </div>
 </section>
 </div>
@@ -495,6 +495,15 @@
   </div> <!-- /.kss-wrapper -->
 
 <!-- SCRIPTS -->
+<script>
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-once/2.1.2/jquery.once.min.js"></script>

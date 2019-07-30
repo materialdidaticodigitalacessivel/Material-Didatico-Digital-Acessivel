@@ -458,20 +458,15 @@
     
     <section class="text-inputs-section">
         <form>
+          <div id="overlay" onclick="off()">
+            <div id="overlay-texto">Resposta enviada com Sucesso!</div>
+          </div>
           <label for="first-name">Nome</label>
           <input id="first-name" type="text" name="textfield">
-          <label for="last-name" class="required-field">Sobrenome</label>
-          <input id="last-name" type="text" name="textfield" aria-describedby="required-message" required>
+          <label for="address" class="required-field">Disserte, em poucas linhas, sobre acessibilidade</label>
+          <textarea id="address" type="text" name="textfield" aria-describedby="required-message" required></textarea>
           <div id="required-message" class="visuallyhidden">Campo obrigatório.</div>
-          <label for="username">Nome de usuário</label>
-          <input id="username" type="text" name="textfield" aria-describedby="username-help-text" aria-invalid="true">
-          <span id="username-help-text" role="alert">Erro de preenchimento no campo acima, com moldura na cor vermelha.</span>
-          <label for="city">Cidade</label>
-          <input id="city" type="text" name="textfield" aria-describedby="city-help-text" aria-invalid="false">
-          <span id="city-help-text" role="alert">Dado preenchido corretamente, com moldura na cor verde.</span>
-          <label for="address">Endereço</label>
-          <textarea id="address" name="addresstext"></textarea>
-          <input type="submit" value="Enviar">
+          <button onclick="on()" type="submit" value="Responder">Responder</button>
         </form>
       </section>
 
@@ -491,26 +486,7 @@
           </div>
         </fieldset>
         </section>
-    
-    <section class="checkboxes-section">
-        <h3 style="margin-bottom: 1em">Atividade de múltipla escolha</h3>
-        <fieldset>
-          <legend>Times de futebol do Brasil</legend>
-          <div class="checkbox column">
-            <input id="corinthians" type="checkbox" name="time" value="corinthians"/>
-            <label for="corinthians">Corinthians</label>
-            <input id="realmadrid" type="checkbox" name="time" value="realmadrid"/>
-            <label for="realmadrid">Real Madrid</label>
-            <input id="flamengo" type="checkbox" name="time" value="flamengo"/>
-            <label for="flamengo">Flamengo</label>
-            <input id="botafogo" type="checkbox" name="time" value="botafogo"/>
-            <label for="botafogo">Botafogo</label>
-            <input id="barcelona" type="checkbox" name="time" value="barcelona"/>
-            <label for="barcelona">Barcelona</label>
-            <input id="palmeiras" type="checkbox" name="time" value="palmeiras"/>
-            <label for="palmeiras">Palmeiras</label>
-          </div>
-        </fieldset>
+
     
 <section data-action="aria-toggle" class="atblock">
 <h3 class="atblock__title">
@@ -755,6 +731,15 @@
   </div> <!-- /.kss-wrapper -->
 
 <!-- SCRIPTS -->
+<script>
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-once/2.1.2/jquery.once.min.js"></script>
