@@ -455,10 +455,12 @@
 <h3>Exemplo</h3>
 <section class="search-section">
     <div role="search">
-        <label for="search_2" class="visuallyhidden">Busca por palavra-chave</label>
-        <input type="search" name="search" id="search_2" class="search-form__input" placeholder="Digite aqui" />
-        <button type="submit"><span class="visuallyhidden">Buscar!</span>Buscar!</button>
-      </div>
+      <form method=get action=http://www.google.com/search>
+      <label for="search_2" class="visuallyhidden">Busca por palavra-chave</label>
+      <input type="hidden" name="sitesearch" value="https://materialdidaticodigitalacessivel.github.io/Material-Didatico-Digital-Acessivel/style-guide/index.html" placeholder="Digite aqui"/>
+      <input type="text" name="q" size="20">
+      <button type="submit"><span class="visuallyhidden">Buscar!</span>Buscar!</button>
+    </div>
 </section>
 </div>
 </div>
